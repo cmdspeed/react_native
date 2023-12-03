@@ -6,22 +6,35 @@ import {
   Button,
   StyleSheet,
   StatusBar,
+  ImageBackground,
+  Image,
 } from "react-native";
+
+import PhotoBG from "../../assets/images/PhotoBG.png";
 
 const RegistrationScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>test</Text>
+      <ImageBackground source={PhotoBG} style={styles.image}>
+        <Text style={styles.text}>test</Text>
+      </ImageBackground>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: StatusBar.currentHeight || 0,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+  },
+  text: {
+    color: "red",
+    textAlign: "center",
   },
 });
 
